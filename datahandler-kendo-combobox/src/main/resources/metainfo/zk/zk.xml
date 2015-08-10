@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>datahandler-kendo-combobox</config-name>
+	<client-config>
+		<data-handler>
+			<name>kendo-combobox</name>
+			<depends>~./js/lib/kendo.all.min.js</depends>
+            <links href="~./css/kendo.common-material.min.css" rel="stylesheet" />
+            <links href="~./css/kendo.material.min.css" rel="stylesheet" />
+			<script src="~./js/data-kendo-combobox.js" />
+		</data-handler>
+	</client-config>
+</zk>

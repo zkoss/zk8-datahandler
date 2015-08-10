@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>datahandler-syntax-highlight</config-name>
+	<client-config>
+		<data-handler>
+			<name>syntax-highlight</name>
+			<depends>~./js/lib/highlight.min.js</depends>
+            <links href="~./css/default.min.css" rel="stylesheet" />
+			<script src="~./js/data-syntax-highlight.js" />
+		</data-handler>
+	</client-config>
+</zk>

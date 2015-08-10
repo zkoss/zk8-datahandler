@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>datahandler-dhtml-scheduler</config-name>
+	<client-config>
+		<data-handler>
+			<name>dhtml-scheduler</name>
+			<depends>~./js/lib/dhtmlxscheduler.js</depends>
+            <links href="~./css/dhtmlxscheduler.css" rel="stylesheet" />
+			<script src="~./js/data-dhtml-scheduler.js" />
+		</data-handler>
+	</client-config>
+</zk>

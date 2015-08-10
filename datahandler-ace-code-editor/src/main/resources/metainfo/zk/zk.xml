@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>datahandler-ace-code-editor</config-name>
+	<client-config>
+		<data-handler>
+			<name>ace-code-editor</name>
+			<depends>~./js/lib/ace.js</depends>
+            <links href="~./css/data-ace-code-editor.css" rel="stylesheet" />
+			<script src="~./js/data-ace-code-editor.js" />
+		</data-handler>
+	</client-config>
+</zk>

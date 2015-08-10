@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>datahandler-v-grid</config-name>
+	<client-config>
+		<data-handler>
+			<name>v-grid</name>
+			<depends>~./js/lib/webcomponents-lite.js</depends>
+            <script src="~./js/data-v-grid.js" />
+		</data-handler>
+	</client-config>
+</zk>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>datahandler-easypiechart</config-name>
+	<client-config>
+		<data-handler>
+			<name>easypiechart</name>
+			<depends>~./js/lib/jquery.easy-pie-chart.js</depends>
+            <script src="~./js/data-easypiechart.js" />
+		</data-handler>
+	</client-config>
+</zk>

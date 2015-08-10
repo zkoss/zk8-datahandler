@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>datahandler-datepicker</config-name>
+	<client-config>
+		<data-handler>
+			<name>datepicker</name>
+			<depends>~./js/lib/jquery-ui.js</depends>
+            <links href="~./css/jquery-ui.css" rel="stylesheet" />
+            <script src="~./js/data-datepicker.js" />
+		</data-handler>
+	</client-config>
+</zk>

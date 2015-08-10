@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>datahandler-markdown</config-name>
+	<client-config>
+		<data-handler>
+			<name>markdown</name>
+			<depends>~./js/lib/showdown.min.js</depends>
+			<script src="~./js/data-markdown.js" />
+		</data-handler>
+	</client-config>
+</zk>

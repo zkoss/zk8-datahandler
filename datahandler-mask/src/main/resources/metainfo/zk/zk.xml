@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<config-name>datahandler-mask</config-name>
+	<client-config>
+		<data-handler>
+			<name>mask</name>
+			<depends>~./js/lib/jquery.mask.min.js</depends>
+			<script src="~./js/data-mask.js" />
+		</data-handler>
+	</client-config>
+</zk>
