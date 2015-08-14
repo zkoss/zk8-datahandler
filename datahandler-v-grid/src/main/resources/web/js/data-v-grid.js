@@ -7,33 +7,24 @@ function (wgt, dataValue) {
 	grid.appendChild(firstChild);
 	dom.appendChild(grid);
 
-	var settings = $.evalJSON(dataValue);
+	var settings = dataValue.length > 0 ? $.evalJSON(dataValue) : {};
 
 	// Set the selection mode
-	if (settings.mode == "multi")
-		grid.selection.mode = settings.mode;
-
-	//Styling Cells
-	if (settings.cellClassGenerator)
-		grid.cellClassGenerator = settings.cellClassGenerator;
-
-	//Styling Rows
-	if (settings.rowClassGenerator)
-		grid.rowClassGenerator = settings.rowClassGenerator;
+	if (settings.mode == 'multi')
+		grid.selection.mode = 'multi';
 
 	var self = this;
 	if (self.command) {
 		grid.addEventListener("select", function() {
 			var selected = grid.selection.selected(),
 				deselected = grid.selection.deselected();
-			console.log('do select : selected - ' + selected + ', deselected - ' + deselected);
 			if (selected.length != 0 || deselected.length != 0)
-    			self.command("zkdhs_vgrid_select", {selected: selected, deselected: deselected});
+    			self.command("$syncServerSelection", {selected: selected, deselected: deselected});
         });
 	}
 
 	if (self.after) {
-		self.after('zkdhc_vgrid_syncSelection', function (evt) {
+		self.after('$syncClientSelection', function (evt) {
 			if (evt != null) {
 				for (var i = 0; i < evt.length; i++) {
 					grid.selection.select(evt[i]);

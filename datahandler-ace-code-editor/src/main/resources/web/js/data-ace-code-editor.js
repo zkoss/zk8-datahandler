@@ -12,7 +12,7 @@ function (wgt, dataValue) {
 	var editor = ace.edit(editor_id);
 
 	//settings
-	var settings = $.evalJSON(dataValue);
+	var settings = dataValue.length > 0 ? $.evalJSON(dataValue) : {};
 	if (settings.theme)
 		editor.setTheme(settings.theme);
 	if (settings.mode)

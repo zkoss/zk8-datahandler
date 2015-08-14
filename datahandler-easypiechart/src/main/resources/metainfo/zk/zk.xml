@@ -5,6 +5,7 @@
 		<data-handler>
 			<name>easypiechart</name>
 			<depends>~./js/lib/jquery.easy-pie-chart.js</depends>
+            <links href="~./css/data-easypiechart.css" rel="stylesheet" />
             <script src="~./js/data-easypiechart.js" />
 		</data-handler>
 	</client-config>

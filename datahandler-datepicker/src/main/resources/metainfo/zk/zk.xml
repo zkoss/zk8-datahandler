@@ -4,8 +4,10 @@
 	<client-config>
 		<data-handler>
 			<name>datepicker</name>
-			<depends>~./js/lib/jquery-ui.js</depends>
-            <links href="~./css/jquery-ui.css" rel="stylesheet" />
+			<depends>~./js/lib/jquery-ui.min.js</depends>
+            <links href="~./css/jquery-ui.min.css" rel="stylesheet" />
+            <links href="~./css/jquery-ui.structure.min.css" rel="stylesheet" />
+            <links href="~./css/jquery-ui.theme.min.css" rel="stylesheet" />
             <script src="~./js/data-datepicker.js" />
 		</data-handler>
 	</client-config>

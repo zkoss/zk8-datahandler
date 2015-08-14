@@ -1,7 +1,11 @@
 function (wgt, dataValue) {
-	jq(wgt.$n()).datepicker({
-		onSelect: function (date) {
-			wgt.updateChange_();
-		}
-	});
+	var $w = jq(wgt.$n()),
+		options = dataValue.length > 0 ? $.evalJSON(dataValue) : {},
+		initOptions = {
+			onSelect: function (date) {
+				wgt.updateChange_();
+			}
+		};
+	$.extend(initOptions, options != null ? options : {});
+	$w.datepicker(initOptions);
 }
