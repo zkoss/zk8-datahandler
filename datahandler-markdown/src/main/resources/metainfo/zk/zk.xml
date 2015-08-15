@@ -3,9 +3,9 @@
 	<config-name>datahandler-markdown</config-name>
 	<client-config>
 		<data-handler>
-			<name>markdown</name>
-			<depends>~./js/lib/showdown.min.js</depends>
-			<script src="~./js/data-markdown.js" />
+			<name>markdown</name> <!-- data-markdown -->
+			<depends>~./js/lib/showdown.min.js</depends> <!-- showdown Library -->
+			<script src="~./js/data-markdown.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>
 </zk>

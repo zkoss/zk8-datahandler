@@ -3,10 +3,10 @@
 	<config-name>datahandler-easypiechart</config-name>
 	<client-config>
 		<data-handler>
-			<name>easypiechart</name>
-			<depends>~./js/lib/jquery.easy-pie-chart.js</depends>
-            <links href="~./css/data-easypiechart.css" rel="stylesheet" />
-            <script src="~./js/data-easypiechart.js" />
+			<name>easypiechart</name> <!-- data-easypiechart -->
+			<depends>~./js/lib/jquery.easy-pie-chart.js</depends> <!-- easy-pie-chart Library -->
+            <links href="~./css/data-easypiechart.css" rel="stylesheet" /> <!-- easy-pie-chart css -->
+            <script src="~./js/data-easypiechart.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>
 </zk>

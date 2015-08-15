@@ -3,9 +3,9 @@
 	<config-name>datahandler-sticking</config-name>
 	<client-config>
 		<data-handler>
-			<name>sticking</name>
-			<depends>~./js/lib/jquery.sticky-kit.min.js</depends>
-            <script src="~./js/data-sticking.js" />
+			<name>sticking</name> <!-- data-sticking -->
+			<depends>~./js/lib/jquery.sticky-kit.min.js</depends> <!-- sticky-kit Library -->
+            <script src="~./js/data-sticking.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>
 </zk>

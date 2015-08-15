@@ -3,10 +3,10 @@
 	<config-name>datahandler-introjs</config-name>
 	<client-config>
 		<data-handler>
-			<name>introjs</name>
-			<depends>~./js/lib/intro.js</depends>
-            <links href="~./css/introjs.css" rel="stylesheet" />
-            <script src="~./js/data-introjs.js" />
+			<name>introjs</name> <!-- data-introjs -->
+			<depends>~./js/lib/intro.js</depends> <!-- introjs Library -->
+            <links href="~./css/introjs.css" rel="stylesheet" /> <!-- introjs css -->
+            <script src="~./js/data-introjs.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>
 </zk>

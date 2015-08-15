@@ -5,6 +5,6 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	width: 500px;
-    height: 400px;
+	width: 500px; /* default width */
+    height: 400px; /* default height */
 }

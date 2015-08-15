@@ -3,11 +3,12 @@
 	<config-name>datahandler-kendo-combobox</config-name>
 	<client-config>
 		<data-handler>
-			<name>kendo-combobox</name>
-			<depends>~./js/lib/kendo.all.min.js</depends>
-            <links href="~./css/kendo.common-material.min.css" rel="stylesheet" />
-            <links href="~./css/kendo.material.min.css" rel="stylesheet" />
-			<script src="~./js/data-kendo-combobox.js" />
+			<name>kendo-combobox</name> <!-- data-kendo-combobox -->
+			<depends>~./js/lib/kendo.ui.core.min.js</depends> <!-- kendo Libray -->
+			<depends>~./js/lib/kendo.combobox.min.js</depends> <!-- kendo Libray -->
+            <links href="~./css/kendo.common-material.min.css" rel="stylesheet" /> <!-- kendo css -->
+            <links href="~./css/kendo.material.min.css" rel="stylesheet" /> <!-- kendo css -->
+			<script src="~./js/data-kendo-combobox.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>
 </zk>

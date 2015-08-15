@@ -3,9 +3,9 @@
 	<config-name>datahandler-mask</config-name>
 	<client-config>
 		<data-handler>
-			<name>mask</name>
-			<depends>~./js/lib/jquery.mask.min.js</depends>
-			<script src="~./js/data-mask.js" />
+			<name>mask</name> <!-- data-mask -->
+			<depends>~./js/lib/jquery.mask.min.js</depends> <!-- jQuery Mask Plugin Library -->
+			<script src="~./js/data-mask.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>
 </zk>

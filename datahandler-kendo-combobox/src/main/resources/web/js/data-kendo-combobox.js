@@ -1,5 +1,8 @@
 function(wgt, dataValue) {
-	var w = jq(wgt.$n());
-	w.kendoComboBox();
-	w.hide(); //deal with invalidate()
+	//Init kendo UI combobox
+	var $w = jq(wgt.$n());
+	$w.kendoComboBox();
+
+	//Deal with invalidate()
+	$w.hide(); 
 }

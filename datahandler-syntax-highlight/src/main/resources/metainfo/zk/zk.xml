@@ -3,10 +3,10 @@
 	<config-name>datahandler-syntax-highlight</config-name>
 	<client-config>
 		<data-handler>
-			<name>syntax-highlight</name>
-			<depends>~./js/lib/highlight.min.js</depends>
-            <links href="~./css/default.min.css" rel="stylesheet" />
-			<script src="~./js/data-syntax-highlight.js" />
+			<name>syntax-highlight</name> <!-- data-syntax-highlight -->
+			<depends>~./js/lib/highlight.min.js</depends> <!-- highlight.js Library -->
+            <links href="~./css/default.min.css" rel="stylesheet" /> <!-- highlight.js css -->
+			<script src="~./js/data-syntax-highlight.js" />  <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>
 </zk>

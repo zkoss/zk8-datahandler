@@ -1,16 +1,21 @@
 function (wgt, dataValue) {
 	var dataObj = dataValue.length > 0 ? $.evalJSON(dataValue) : {};
-	//init
+	//Init scheduler
 	var initial_date = dataObj.initial_date,
 		initial_view = dataObj.initial_view;
 	scheduler.init(wgt.$n(), initial_date ? initial_date : new Date(), initial_view ? initial_view : "week");
 
-	//data
+	//Parse data
+	//For example : {data:[{id: ..., start_date: ... , end_date: ..., text: ..., ... }, ... ]}
 	var data = dataObj.data;
 	if (data)
 		scheduler.parse(data, "json");
 
-	//event
+	//Events to server.
+	// If using composer (MVC), it would trigger the Event Listeners.
+	// If using view model (MVVM), it would trigger the Commands which have been indicated by the following annotations:
+	// @ToServerCommand({"dhtmlxscheduler$addServerEvent", "dhtmlxscheduler$deleteServerEvent", "dhtmlxscheduler$changeServerEvent"})
+	// Notice that the command name would be expanded by adding the prefix "dhtmlxscheduler" automatically.
 	var self = this;
 	if (self.command) {
 		var formatFunc = scheduler.date.date_to_str("%Y-%m-%d %H:%i");
@@ -29,7 +34,14 @@ function (wgt, dataValue) {
         });
 	}
 
-	//server_side (MVVM)
+	// Call back from server side (MVVM only). It works if the following annotations have been set:
+	// @ToClientCommand({"dhtmlxscheduler$addClientEvent", "dhtmlxscheduler$deleteClientEvent"})
+	// And use the following annotations to tranfer the data.
+	//@NotifyCommands({
+	//    @NotifyCommand(value = "dhtmlxscheduler$addClientEvent", onChange = "_vm_.addEventList"),
+	//    @NotifyCommand(value = "dhtmlxscheduler$deleteClientEvent", onChange = "_vm_.removeEventList")
+	//})
+	// Notice that the aftercommand name would be expanded by adding the prefix "dhtmlxscheduler" automatically.
 	if (self.after) {
 		//addEvent
 		self.after('$addClientEvent', function (evt) {

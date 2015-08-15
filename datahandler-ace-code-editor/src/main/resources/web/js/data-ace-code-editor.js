@@ -1,4 +1,5 @@
 function (wgt, dataValue) {
+	//Create a Div to init Ace
 	var wgtDOM = wgt.$n(),
 		editor_id = 'zk-ace-code-editor',
 		div = document.createElement('div'),
@@ -8,7 +9,6 @@ function (wgt, dataValue) {
 	div.setAttribute('id', editor_id);
 	div.setAttribute('class', 'data-ace');
 	jq(div).insertAfter(wgtDOM);
-
 	var editor = ace.edit(editor_id);
 
 	//settings
@@ -18,7 +18,9 @@ function (wgt, dataValue) {
 	if (settings.mode)
 		editor.getSession().setMode(settings.mode);
 
+	//Set the default value
 	editor.getSession().setValue(wgt.getValue());
+	//Synchronize the value
 	editor.getSession().on('change', function(){
 		wgt.setValue(editor.getSession().getValue());
 		wgt.fireOnChange();
