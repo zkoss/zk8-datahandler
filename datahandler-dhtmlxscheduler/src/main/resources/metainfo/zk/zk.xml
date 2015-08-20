@@ -4,8 +4,8 @@
 	<client-config>
 		<data-handler>
 			<name>dhtmlxscheduler</name> <!-- data-dhtmlxscheduler -->
-			<depends>~./js/lib/dhtmlxscheduler.js</depends> <!-- dhtmlxscheduler Library -->
-            <links href="~./css/dhtmlxscheduler.css" rel="stylesheet" /> <!-- dhtmlxscheduler css -->
+			<script src="~./js/lib/dhtmlxscheduler.js" /> <!-- dhtmlxscheduler Library -->
+            <link href="~./css/dhtmlxscheduler.css" rel="stylesheet" /> <!-- dhtmlxscheduler css -->
 			<script src="~./js/data-dhtmlxscheduler.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>

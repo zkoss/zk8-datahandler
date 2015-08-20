@@ -34,7 +34,11 @@ function (wgt, dataValue) {
         });
 	}
 
-	// Call back from server side (MVVM only). It works if the following annotations have been set:
+	// Call back from server side.
+	// in MVC: use methods.
+	// 		Clients.sendClientCommand(component, "dhtmlxscheduler$addClientEvent", data);
+	//		Clients.sendClientCommand(component, "dhtmlxscheduler$deleteClientEvent", data);
+	// in MVVM: It works if the following annotations have been set:
 	// @ToClientCommand({"dhtmlxscheduler$addClientEvent", "dhtmlxscheduler$deleteClientEvent"})
 	// And use the following annotations to tranfer the data.
 	//@NotifyCommands({
@@ -66,4 +70,3 @@ function (wgt, dataValue) {
 		});
     }
 }
-

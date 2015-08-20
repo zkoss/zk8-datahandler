@@ -4,7 +4,7 @@
 	<client-config>
 		<data-handler>
 			<name>markdown</name> <!-- data-markdown -->
-			<depends>~./js/lib/showdown.min.js</depends> <!-- showdown Library -->
+			<script src="~./js/lib/showdown.min.js" /> <!-- showdown Library -->
 			<script src="~./js/data-markdown.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>

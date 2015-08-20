@@ -87,8 +87,8 @@ In ***zk.xml***
 <client-config>
 	<data-handler>
 		<name>dhtmlxscheduler</name> <!-- data-dhtmlxscheduler -->
-		<depends>~./js/lib/dhtmlxscheduler.js</depends> <!-- dhtmlxscheduler Library -->
-        <links href="~./css/dhtmlxscheduler.css" rel="stylesheet" /> <!-- dhtmlxscheduler css -->
+		<script src="~./js/lib/dhtmlxscheduler.js" /> <!-- dhtmlxscheduler Library -->
+        <link href="~./css/dhtmlxscheduler.css" rel="stylesheet" /> <!-- dhtmlxscheduler css -->
 		<script src="~./js/data-dhtmlxscheduler.js" /> <!-- Data Handler Script -->
 	</data-handler>
 </client-config>
@@ -132,12 +132,17 @@ function (wgt, dataValue) {
         });
 	}
 
-	// Call back from server side (MVVM only). It works if the following annotations have been set:
+	// Call back from server side.
+	// in MVC: use methods.
+	// 		Clients.sendClientCommand(component, "dhtmlxscheduler$addClientEvent", data);
+	//		Clients.sendClientCommand(component, "dhtmlxscheduler$deleteClientEvent", data);
+	// in MVVM: It works if the following annotations have been set:
 	// @ToClientCommand({"dhtmlxscheduler$addClientEvent", "dhtmlxscheduler$deleteClientEvent"})
-	// @NotifyCommands({
+	// And use the following annotations to tranfer the data.
+	//@NotifyCommands({
 	//    @NotifyCommand(value = "dhtmlxscheduler$addClientEvent", onChange = "_vm_.addEventList"),
 	//    @NotifyCommand(value = "dhtmlxscheduler$deleteClientEvent", onChange = "_vm_.removeEventList")
-	// })
+	//})
 	// Notice that the aftercommand name would be expanded by adding the prefix "dhtmlxscheduler" automatically.
 	if (self.after) {
 		//addEvent

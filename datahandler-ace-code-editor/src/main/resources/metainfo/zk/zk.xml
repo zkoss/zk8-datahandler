@@ -4,9 +4,9 @@
 	<client-config>
 		<data-handler>
 			<name>ace-code-editor</name> <!-- data-ace-code-editor -->
-			<depends>~./js/lib/ace.js</depends> <!-- ace.js Library -->
-            <links href="~./css/data-ace-code-editor.css" rel="stylesheet" /> <!-- custom css -->
-			<script src="~./js/data-ace-code-editor.js" /> <!-- Data Handler Script -->
+			<link href="~./css/data-ace-code-editor.css" rel="stylesheet" /> <!-- custom css -->
+			<script src="~./js/lib/ace.js" /> <!-- ace.js Library -->
+            <script src="~./js/data-ace-code-editor.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>
 </zk>

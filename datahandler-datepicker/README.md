@@ -28,10 +28,10 @@ In ***zk.xml***
 <client-config>
 	<data-handler>
 		<name>datepicker</name> <!-- data-datepicker -->
-		<depends>~./js/lib/jquery-ui.min.js</depends> <!-- jQuery UI Library -->
-        <links href="~./css/jquery-ui.min.css" rel="stylesheet" /> <!-- jQuery UI css -->
-        <links href="~./css/jquery-ui.structure.min.css" rel="stylesheet" /> <!-- jQuery UI css -->
-        <links href="~./css/jquery-ui.theme.min.css" rel="stylesheet" /> <!-- jQuery UI theme css -->
+		<script src="~./js/lib/jquery-ui.min.js" /> <!-- jQuery UI Library -->
+        <link href="~./css/jquery-ui.min.css" rel="stylesheet" /> <!-- jQuery UI css -->
+        <link href="~./css/jquery-ui.structure.min.css" rel="stylesheet" /> <!-- jQuery UI css -->
+        <link href="~./css/jquery-ui.theme.min.css" rel="stylesheet" /> <!-- jQuery UI theme css -->
         <script src="~./js/data-datepicker.js" />  <!-- Data Handler Script -->
 	</data-handler>
 </client-config>

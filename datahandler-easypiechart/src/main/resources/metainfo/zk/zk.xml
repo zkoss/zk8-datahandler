@@ -4,8 +4,8 @@
 	<client-config>
 		<data-handler>
 			<name>easypiechart</name> <!-- data-easypiechart -->
-			<depends>~./js/lib/jquery.easy-pie-chart.js</depends> <!-- easy-pie-chart Library -->
-            <links href="~./css/data-easypiechart.css" rel="stylesheet" /> <!-- easy-pie-chart css -->
+			<script src="~./js/lib/jquery.easy-pie-chart.js" /> <!-- easy-pie-chart Library -->
+            <link href="~./css/data-easypiechart.css" rel="stylesheet" /> <!-- easy-pie-chart css -->
             <script src="~./js/data-easypiechart.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>

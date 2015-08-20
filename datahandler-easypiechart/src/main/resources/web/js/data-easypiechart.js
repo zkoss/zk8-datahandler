@@ -16,7 +16,10 @@ function (wgt, dataValue) {
 	$.extend(configuration, defaultConfig, size ? {size: size} : {});
 	$w.easyPieChart(configuration);
 
-	// Call back from server side (MVVM only). It works if the following annotations have been set:
+	// Call back from server side.
+	// in MVC: use methods.
+	// 		Clients.sendClientCommand(component, "easypiechart$clientUpdate", data);
+	// in MVVM: It works if the following annotations have been set.
 	// @ToClientCommand({"easypiechart$clientUpdate"})
 	// And use the following annotation to tranfer the data.
 	// @NotifyCommand(value = "easypiechart$clientUpdate", onChange = "_vm_.percent").

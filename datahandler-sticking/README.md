@@ -29,7 +29,7 @@ In ***zk.xml***
 <client-config>
 		<data-handler>
 			<name>sticking</name> <!-- data-sticking -->
-			<depends>~./js/lib/jquery.sticky-kit.min.js</depends> <!-- sticky-kit Library -->
+			<script src="~./js/lib/jquery.sticky-kit.min.js" /> <!-- sticky-kit Library -->
             <script src="~./js/data-sticking.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>

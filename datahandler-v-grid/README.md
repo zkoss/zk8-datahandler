@@ -78,8 +78,8 @@ In ***zk.xml***
 <client-config>
 	<data-handler>
 		<name>v-grid</name> <!-- data-v-grid -->
-		<depends>~./js/lib/webcomponents-lite.js</depends>  <!-- vaadin webcomponent Library -->
-        <links href="~./js/lib/vaadin-grid/vaadin-grid.html" rel="import" /> <!-- vaadin grid Library -->
+		<script src="~./js/lib/webcomponents-lite.js" />  <!-- vaadin webcomponent Library -->
+        <link href="~./js/lib/vaadin-grid/vaadin-grid.html" rel="import" /> <!-- vaadin grid Library -->
         <script src="~./js/data-v-grid.js" /> <!-- Data Handler Script -->
 	</data-handler>
 </client-config>
@@ -120,7 +120,10 @@ function (wgt, dataValue) {
 	        });
 		}
 
-		// Call back from server side (MVVM only). It works if the following annotations have been set:
+		// Call back from server side.
+		// in MVC: use methods.
+		// 		Clients.sendClientCommand(component, "v-grid$syncClientSelection", data);
+		// in MVVM: It works if the following annotations have been set:
 		// @ToClientCommand({"v-grid$syncClientSelection"})
 		// And use the following annotations to tranfer the data:
 		// @NotifyCommand(value = "v-grid$syncClientSelection", onChange = "_vm_.selections")
@@ -135,7 +138,6 @@ function (wgt, dataValue) {
 			});
 	    }
 	});
-	
 }
 ```
 See more supported events - [v-grid API](http://vaadin.github.io/components-apidoc/#v-grid).

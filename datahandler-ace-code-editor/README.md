@@ -1,6 +1,6 @@
 # Data Handler - ace-code-editor
 ##Introduction
-Use Ace code editor on ZK Component -  [Textbox](http://books.zkoss.org/wiki/ZK_Component_Reference/Input/Textbox).
+Use Ace code editor on ZK Component - [Textbox](http://books.zkoss.org/wiki/ZK_Component_Reference/Input/Textbox).
 
 ##How to use
 In ***pom.xml***
@@ -30,8 +30,8 @@ In ***zk.xml***
 <client-config>
 	<data-handler>
 		<name>ace-code-editor</name> <!-- data-ace-code-editor -->
-		<depends>~./js/lib/ace.js</depends> <!-- ace.js Library -->
-        <links href="~./css/data-ace-code-editor.css" rel="stylesheet" /> <!-- custom css -->
+		<link href="~./css/data-ace-code-editor.css" rel="stylesheet" /> <!-- custom css -->
+		<script src="~./js/lib/ace.js" /> <!-- ace.js Library -->
 		<script src="~./js/data-ace-code-editor.js" /> <!-- Data Handler Script -->
 	</data-handler>
 </client-config>

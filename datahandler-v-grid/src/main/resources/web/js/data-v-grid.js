@@ -31,7 +31,10 @@ function (wgt, dataValue) {
 	        });
 		}
 
-		// Call back from server side (MVVM only). It works if the following annotations have been set:
+		// Call back from server side.
+		// in MVC: use methods.
+		// 		Clients.sendClientCommand(component, "v-grid$syncClientSelection", data);
+		// in MVVM: It works if the following annotations have been set:
 		// @ToClientCommand({"v-grid$syncClientSelection"})
 		// And use the following annotations to tranfer the data:
 		// @NotifyCommand(value = "v-grid$syncClientSelection", onChange = "_vm_.selections")
@@ -45,6 +48,5 @@ function (wgt, dataValue) {
 				}
 			});
 	    }
-	});
-	
+	});	
 }

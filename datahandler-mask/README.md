@@ -30,7 +30,7 @@ In ***zk.xml***
 	<data-handler>
 		<name>mask</name> <
 		!-- data-mask -->
-		<depends>~./js/lib/jquery.mask.min.js</depends> <!-- jQuery Mask Plugin Library -->
+		<script src="~./js/lib/jquery.mask.min.js" /> <!-- jQuery Mask Plugin Library -->
 		<script src="~./js/data-mask.js" /> <!-- Data Handler Script -->
 	</data-handler>
 </client-config>

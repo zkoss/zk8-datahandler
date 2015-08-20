@@ -4,8 +4,8 @@
 	<client-config>
 		<data-handler>
 			<name>v-grid</name> <!-- data-v-grid -->
-			<depends>~./js/lib/webcomponents-lite.js</depends> <!-- vaadin webcomponent Library -->
-            <links href="~./js/lib/vaadin-grid/vaadin-grid.html" rel="import" /> <!-- vaadin grid Library -->
+			<script src="~./js/lib/webcomponents-lite.js" /> <!-- vaadin webcomponent Library -->
+            <link href="~./js/lib/vaadin-grid/vaadin-grid.html" rel="import" /> <!-- vaadin grid Library -->
             <script src="~./js/data-v-grid.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>

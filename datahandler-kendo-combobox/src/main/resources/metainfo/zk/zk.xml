@@ -4,10 +4,10 @@
 	<client-config>
 		<data-handler>
 			<name>kendo-combobox</name> <!-- data-kendo-combobox -->
-			<depends>~./js/lib/kendo.ui.core.min.js</depends> <!-- kendo Libray -->
-			<depends>~./js/lib/kendo.combobox.min.js</depends> <!-- kendo Libray -->
-            <links href="~./css/kendo.common-material.min.css" rel="stylesheet" /> <!-- kendo css -->
-            <links href="~./css/kendo.material.min.css" rel="stylesheet" /> <!-- kendo css -->
+			<script src="~./js/lib/kendo.ui.core.min.js" /> <!-- kendo Libray -->
+			<script src="~./js/lib/kendo.combobox.min.js" /> <!-- kendo Libray -->
+            <link href="~./css/kendo.common-material.min.css" rel="stylesheet" /> <!-- kendo css -->
+            <link href="~./css/kendo.material.min.css" rel="stylesheet" /> <!-- kendo css -->
 			<script src="~./js/data-kendo-combobox.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>

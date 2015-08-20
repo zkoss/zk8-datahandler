@@ -4,8 +4,8 @@
 	<client-config>
 		<data-handler>
 			<name>introjs</name> <!-- data-introjs -->
-			<depends>~./js/lib/intro.js</depends> <!-- introjs Library -->
-            <links href="~./css/introjs.css" rel="stylesheet" /> <!-- introjs css -->
+			<script src="~./js/lib/intro.js" /> <!-- introjs Library -->
+            <link href="~./css/introjs.css" rel="stylesheet" /> <!-- introjs css -->
             <script src="~./js/data-introjs.js" /> <!-- Data Handler Script -->
 		</data-handler>
 	</client-config>

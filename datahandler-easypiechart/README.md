@@ -8,7 +8,7 @@ In ***pom.xml***
 ```xml
 <dependency>
     <groupId>org.zkoss</groupId>
-    <artifactId>datahandler-dhtmlxscheduler</artifactId>
+    <artifactId>datahandler-easypiechart</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
@@ -55,8 +55,8 @@ In ***zk.xml***
 <client-config>
 	<data-handler>
 		<name>easypiechart</name> <!-- data-easypiechart -->
-		<depends>~./js/lib/jquery.easy-pie-chart.js</depends> <!-- easy-pie-chart Library -->
-        <links href="~./css/data-easypiechart.css" rel="stylesheet" /> <!-- easy-pie-chart css -->
+		<script src="~./js/lib/jquery.easy-pie-chart.js" /> <!-- easy-pie-chart Library -->
+        <link href="~./css/data-easypiechart.css" rel="stylesheet" /> <!-- easy-pie-chart css -->
         <script src="~./js/data-easypiechart.js" /> <!-- Data Handler Script -->
 	</data-handler>
 </client-config>
@@ -82,7 +82,10 @@ function (wgt, dataValue) {
 	$.extend(configuration, defaultConfig, size ? {size: size} : {});
 	$w.easyPieChart(configuration);
 
-	// Call back from server side (MVVM only). It works if the following annotations have been set:
+	// Call back from server side.
+	// in MVC: use methods.
+	// 		Clients.sendClientCommand(component, "easypiechart$clientUpdate", data);
+	// in MVVM: It works if the following annotations have been set.
 	// @ToClientCommand({"easypiechart$clientUpdate"})
 	// And use the following annotation to tranfer the data.
 	// @NotifyCommand(value = "easypiechart$clientUpdate", onChange = "_vm_.percent").
